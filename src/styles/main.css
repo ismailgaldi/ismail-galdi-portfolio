@@ -1,0 +1,24 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   MAIN STYLES ENTRY
+   Import all styles in order
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Design Tokens */
+@import './tokens.css';
+
+/* Base / Reset */
+@import './base.css';
+
+/* Reusable Components */
+@import './components.css';
+
+/* Section Styles */
+@import './sections/preloader.css';
+@import './sections/nav.css';
+@import './sections/hero.css';
+@import './sections/about.css';
+@import './sections/projects.css';
+@import './sections/services.css';
+@import './sections/contact.css';
+@import './sections/footer.css';
+@import './sections/modal.css';

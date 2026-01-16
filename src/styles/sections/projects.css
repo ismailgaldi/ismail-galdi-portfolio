@@ -1,0 +1,226 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   PROJECTS SECTION (PINNED HORIZONTAL SCROLL)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.projects {
+    position: relative;
+    padding-top: var(--section-padding);
+    overflow: hidden;
+}
+
+.projects__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+    margin-bottom: var(--space-12);
+}
+
+.projects__title {
+    opacity: 0;
+}
+
+.projects__counter {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    font-variant-numeric: tabular-nums;
+}
+
+.projects__current {
+    color: var(--accent);
+}
+
+.projects__separator {
+    color: var(--border);
+}
+
+.projects__total {
+    color: var(--text-muted);
+}
+
+/* Track wrapper for pinning */
+.projects__track-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.projects__track {
+    display: flex;
+    width: fit-content;
+}
+
+/* Individual project panels */
+.project-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+    width: 100vw;
+    min-height: 80vh;
+    flex-shrink: 0;
+    padding-inline: var(--container-padding);
+    padding-block: var(--space-16);
+}
+
+.project-panel__content {
+    max-width: 600px;
+    justify-self: end;
+}
+
+.project-panel__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.project-panel__year {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--accent);
+}
+
+.project-panel__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.project-panel__title {
+    font-size: var(--text-4xl);
+    font-weight: var(--weight-bold);
+    letter-spacing: var(--tracking-tight);
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-6);
+    opacity: 0;
+}
+
+.project-panel__description {
+    font-size: var(--text-lg);
+    color: var(--text-muted);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-4);
+}
+
+.project-panel__highlight {
+    font-size: var(--text-base);
+    color: var(--text-muted);
+    padding: var(--space-4);
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin-bottom: var(--space-8);
+}
+
+.project-panel__highlight strong {
+    color: var(--accent);
+}
+
+.project-panel__cta {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all var(--duration-normal) var(--ease-out);
+}
+
+.project-panel:hover .project-panel__cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image side */
+.project-panel__image {
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.project-panel__image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.project-panel__image-wrapper:hover {
+    transform: rotateY(-3deg) rotateX(2deg);
+}
+
+.project-panel__placeholder {
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+}
+
+.project-panel__placeholder svg {
+    width: 60%;
+    height: auto;
+}
+
+/* Floating accent line (animated via JS) */
+.projects__accent-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .project-panel {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+        text-align: center;
+    }
+
+    .project-panel__content {
+        justify-self: center;
+        order: 2;
+    }
+
+    .project-panel__image {
+        order: 1;
+    }
+
+    .project-panel__cta {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile: Stack cards vertically */
+@media (max-width: 768px) {
+    .projects__track-wrapper {
+        overflow: visible;
+    }
+
+    .projects__track {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .project-panel {
+        width: 100%;
+        min-height: auto;
+        padding-block: var(--space-12);
+    }
+
+    .projects__counter {
+        display: none;
+    }
+}

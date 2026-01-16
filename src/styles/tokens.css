@@ -1,0 +1,131 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   DESIGN TOKENS
+   Centralized variables for easy customization
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+   /* ─────────────────────────────────────────────────────────────────────────
+     COLORS
+     To customize: change these values to match your brand
+     ───────────────────────────────────────────────────────────────────────── */
+   --background: #0B0D10;
+   --surface: #11151B;
+   --text: #F5F7FA;
+   --text-muted: rgba(245, 247, 250, 0.65);
+   --accent: #B6FF3B;
+   --accent-rgb: 182, 255, 59;
+   --border: rgba(245, 247, 250, 0.12);
+   --border-hover: rgba(245, 247, 250, 0.24);
+
+   /* Accent variants */
+   --accent-glow: rgba(182, 255, 59, 0.15);
+   --accent-soft: rgba(182, 255, 59, 0.08);
+
+   /* ─────────────────────────────────────────────────────────────────────────
+     TYPOGRAPHY
+     Using Space Grotesk - change font-family for different look
+     ───────────────────────────────────────────────────────────────────────── */
+   --font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+   /* Type scale using clamp for fluid typography */
+   --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+   --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+   --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+   --text-lg: clamp(1.125rem, 1rem + 0.625vw, 1.375rem);
+   --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+   --text-2xl: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+   --text-3xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+   --text-4xl: clamp(2.5rem, 1.8rem + 3.5vw, 4rem);
+   --text-5xl: clamp(3rem, 2rem + 5vw, 6rem);
+   --text-display: clamp(4rem, 2.5rem + 7.5vw, 10rem);
+
+   /* Font weights */
+   --weight-light: 300;
+   --weight-regular: 400;
+   --weight-medium: 500;
+   --weight-semibold: 600;
+   --weight-bold: 700;
+
+   /* Line heights */
+   --leading-tight: 1.1;
+   --leading-snug: 1.25;
+   --leading-normal: 1.5;
+   --leading-relaxed: 1.75;
+
+   /* Letter spacing */
+   --tracking-tight: -0.02em;
+   --tracking-normal: 0;
+   --tracking-wide: 0.02em;
+   --tracking-wider: 0.04em;
+
+   /* ─────────────────────────────────────────────────────────────────────────
+     SPACING
+     ───────────────────────────────────────────────────────────────────────── */
+   --space-1: 0.25rem;
+   --space-2: 0.5rem;
+   --space-3: 0.75rem;
+   --space-4: 1rem;
+   --space-5: 1.25rem;
+   --space-6: 1.5rem;
+   --space-8: 2rem;
+   --space-10: 2.5rem;
+   --space-12: 3rem;
+   --space-16: 4rem;
+   --space-20: 5rem;
+   --space-24: 6rem;
+   --space-32: 8rem;
+
+   /* Fluid spacing */
+   --section-padding: clamp(4rem, 8vw, 8rem);
+   --container-padding: clamp(1rem, 4vw, 2rem);
+   --container-max: 1400px;
+
+   /* ─────────────────────────────────────────────────────────────────────────
+     BORDERS & RADIUS
+     ───────────────────────────────────────────────────────────────────────── */
+   --radius-sm: 0.25rem;
+   --radius-md: 0.5rem;
+   --radius-lg: 1rem;
+   --radius-xl: 1.5rem;
+   --radius-full: 9999px;
+
+   /* ─────────────────────────────────────────────────────────────────────────
+     TRANSITIONS
+     ───────────────────────────────────────────────────────────────────────── */
+   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+   --ease-in-out: cubic-bezier(0.83, 0, 0.17, 1);
+   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+   --duration-fast: 200ms;
+   --duration-normal: 400ms;
+   --duration-slow: 700ms;
+
+   /* ─────────────────────────────────────────────────────────────────────────
+     LAYERS (z-index)
+     ───────────────────────────────────────────────────────────────────────── */
+   --z-base: 1;
+   --z-nav: 100;
+   --z-modal: 200;
+   --z-preloader: 300;
+   --z-toast: 250;
+
+   /* ─────────────────────────────────────────────────────────────────────────
+     EFFECTS
+     ───────────────────────────────────────────────────────────────────────── */
+   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+   --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.2);
+   --shadow-glow: 0 0 30px rgba(var(--accent-rgb), 0.3);
+
+   /* Noise texture (data URI for performance) */
+   --noise-texture: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+   :root {
+      --duration-fast: 0ms;
+      --duration-normal: 0ms;
+      --duration-slow: 0ms;
+   }
+}

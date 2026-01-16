@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ismail Galdi — Web Designer specializing in UI/UX and front-end development. Creating premium digital experiences with motion and accessibility in mind.">
+  <meta name="theme-color" content="#0B0D10">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ismail Galdi — Web Designer">
+  <meta property="og:description" content="UI/UX + Front-End Designer creating premium digital experiences">
+  <meta property="og:type" content="website">
+  
+  <title>Ismail Galdi — Web Designer</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>IG</text></svg>">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader__content">
+      <div class="preloader__monogram">IG</div>
+      <div class="preloader__progress">
+        <div class="preloader__progress-bar"></div>
+      </div>
+      <div class="preloader__text">Loading experience...</div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__container">
+      <a href="#hero" class="nav__brand" aria-label="Back to top">
+        <span class="nav__brand-text">IG</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#about" class="nav__link" data-section="about">About</a></li>
+        <li><a href="#projects" class="nav__link" data-section="projects">Projects</a></li>
+        <li><a href="#services" class="nav__link" data-section="services">Services</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta" data-section="contact">Let's Talk</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="nav__mobile" aria-hidden="true">
+      <ul class="nav__mobile-links">
+        <li><a href="#about" class="nav__mobile-link">About</a></li>
+        <li><a href="#projects" class="nav__mobile-link">Projects</a></li>
+        <li><a href="#services" class="nav__mobile-link">Services</a></li>
+        <li><a href="#contact" class="nav__mobile-link">Let's Talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero__background">
+        <div class="hero__gradient"></div>
+        <div class="hero__noise"></div>
+      </div>
+      <div class="hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title" data-split>Ismail Galdi</h1>
+          <p class="hero__subtitle">
+            <span class="hero__role" data-split>Web Designer</span>
+            <span class="hero__separator">—</span>
+            <span class="hero__specialty" data-split>UI/UX + Front-End</span>
+          </p>
+          <p class="hero__tagline" data-split>Crafting premium digital experiences with motion, clarity, and purpose.</p>
+        </div>
+        <div class="hero__canvas-wrapper">
+          <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        </div>
+      </div>
+      <div class="hero__scroll-indicator">
+        <span class="hero__scroll-text">Scroll</span>
+        <div class="hero__scroll-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="about__watermark" aria-hidden="true">IG</div>
+      <div class="about__container">
+        <h2 class="about__title section-title" data-split>About</h2>
+        <div class="about__grid">
+          <div class="about__bio">
+            <p class="about__text" data-reveal>
+              I'm a designer who bridges aesthetics and functionality. With over 5 years of experience, I specialize in creating digital products that users genuinely enjoy. From initial concept to production-ready code, I handle the full spectrum of web design.
+            </p>
+            <p class="about__text" data-reveal>
+              My approach combines user research, visual design, and front-end development to deliver solutions that are both beautiful and performant. I believe great design is invisible—it just works.
+            </p>
+            <div class="about__focus">
+              <h3 class="about__focus-title">Focus Areas</h3>
+              <div class="about__chips">
+                <span class="chip" data-reveal>Design Systems</span>
+                <span class="chip" data-reveal>Responsive Web</span>
+                <span class="chip" data-reveal>Prototyping</span>
+                <span class="chip" data-reveal>Motion</span>
+                <span class="chip" data-reveal>Accessibility</span>
+              </div>
+            </div>
+            <div class="about__toolbox">
+              <h3 class="about__toolbox-title">Toolbox</h3>
+              <div class="about__tools">
+                <div class="tool" data-reveal>
+                  <svg class="tool__icon" viewBox="0 0 38 57" fill="currentColor">
+                    <path d="M19 28.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19Z"/>
+                    <path d="M9.5 47.5a9.5 9.5 0 0 0 9.5 9.5V38a9.5 9.5 0 0 0-9.5 9.5Z"/>
+                    <path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5Z"/>
+                    <path d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5Z"/>
+                    <path d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19Z"/>
+                  </svg>
+                  <span class="tool__name">Figma</span>
+                </div>
+                <div class="tool" data-reveal>
+                  <svg class="tool__icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  </svg>
+                  <span class="tool__name">Framer</span>
+                </div>
+                <div class="tool" data-reveal>
+                  <svg class="tool__icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278z"/>
+                  </svg>
+                  <span class="tool__name">React</span>
+                </div>
+                <div class="tool" data-reveal>
+                  <svg class="tool__icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.047 4.364h.094c3.583 0 6.49 2.907 6.49 6.49 0 2.633-1.57 4.897-3.823 5.916l-2.62-7.194a.399.399 0 0 0-.747 0l-2.62 7.194c-2.253-1.02-3.822-3.283-3.822-5.916 0-3.583 2.907-6.49 6.49-6.49h.558zm-.047 15.272c-3.583 0-6.49-2.907-6.49-6.49 0-.464.049-.916.142-1.352l3.95 10.852a6.449 6.449 0 0 0 2.398.462 6.449 6.449 0 0 0 2.398-.462l3.95-10.852c.093.436.142.888.142 1.352 0 3.583-2.907 6.49-6.49 6.49z"/>
+                  </svg>
+                  <span class="tool__name">GSAP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about__portrait">
+            <div class="about__portrait-wrapper" data-parallax>
+              <div class="about__portrait-placeholder">
+                <svg viewBox="0 0 200 200" fill="none">
+                  <rect width="200" height="200" fill="var(--surface)"/>
+                  <circle cx="100" cy="80" r="40" fill="var(--border)"/>
+                  <ellipse cx="100" cy="180" rx="60" ry="50" fill="var(--border)"/>
+                </svg>
+                <span class="about__portrait-label">Your Photo Here</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="projects__header">
+        <h2 class="projects__title section-title" data-split>Selected Work</h2>
+        <div class="projects__counter">
+          <span class="projects__current">01</span>
+          <span class="projects__separator">/</span>
+          <span class="projects__total">04</span>
+        </div>
+      </div>
+      <div class="projects__track-wrapper">
+        <div class="projects__track">
+          <!-- Project 1 -->
+          <article class="project-panel" data-project="1">
+            <div class="project-panel__content">
+              <div class="project-panel__meta">
+                <span class="project-panel__year">2024</span>
+                <div class="project-panel__tags">
+                  <span class="tag">UI/UX</span>
+                  <span class="tag">Design System</span>
+                  <span class="tag">Prototyping</span>
+                </div>
+              </div>
+              <h3 class="project-panel__title" data-split>SkyBank Mobile</h3>
+              <p class="project-panel__description">A comprehensive mobile banking experience redesign, focusing on seamless onboarding, KYC compliance, and AI-powered chatbot integration.</p>
+              <div class="project-panel__highlight">
+                <strong>Highlight:</strong> Reduced onboarding time by 40% while maintaining security compliance.
+              </div>
+              <button class="project-panel__cta btn btn--outline" data-case-study="skybank">
+                <span>View Case Study</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+            <div class="project-panel__image">
+              <div class="project-panel__image-wrapper">
+                <div class="project-panel__placeholder" style="background: linear-gradient(135deg, #1a1f2e 0%, #2a3f5f 100%);">
+                  <svg viewBox="0 0 400 300" fill="none">
+                    <rect x="100" y="50" width="200" height="200" rx="20" fill="var(--accent)" opacity="0.2"/>
+                    <rect x="120" y="70" width="160" height="160" rx="12" fill="var(--accent)" opacity="0.3"/>
+                    <circle cx="200" cy="150" r="40" fill="var(--accent)" opacity="0.5"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-panel" data-project="2">
+            <div class="project-panel__content">
+              <div class="project-panel__meta">
+                <span class="project-panel__year">2024</span>
+                <div class="project-panel__tags">
+                  <span class="tag">UX Audit</span>
+                  <span class="tag">IA</span>
+                  <span class="tag">UI Refresh</span>
+                </div>
+              </div>
+              <h3 class="project-panel__title" data-split>Pulse Analytics</h3>
+              <p class="project-panel__description">Complete SaaS dashboard redesign focusing on data visualization, responsive tables, and improved information architecture.</p>
+              <div class="project-panel__highlight">
+                <strong>Highlight:</strong> Increased user task completion rate by 65% with clearer data presentation.
+              </div>
+              <button class="project-panel__cta btn btn--outline" data-case-study="pulse">
+                <span>View Case Study</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+            <div class="project-panel__image">
+              <div class="project-panel__image-wrapper">
+                <div class="project-panel__placeholder" style="background: linear-gradient(135deg, #1f1a2e 0%, #3f2a5f 100%);">
+                  <svg viewBox="0 0 400 300" fill="none">
+                    <rect x="50" y="80" width="300" height="140" rx="8" fill="var(--accent)" opacity="0.15"/>
+                    <rect x="70" y="100" width="80" height="60" rx="4" fill="var(--accent)" opacity="0.3"/>
+                    <rect x="160" y="100" width="80" height="60" rx="4" fill="var(--accent)" opacity="0.4"/>
+                    <rect x="250" y="100" width="80" height="60" rx="4" fill="var(--accent)" opacity="0.25"/>
+                    <rect x="70" y="170" width="260" height="30" rx="4" fill="var(--accent)" opacity="0.2"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-panel" data-project="3">
+            <div class="project-panel__content">
+              <div class="project-panel__meta">
+                <span class="project-panel__year">2023</span>
+                <div class="project-panel__tags">
+                  <span class="tag">Web Design</span>
+                  <span class="tag">Conversion</span>
+                  <span class="tag">Landing Pages</span>
+                </div>
+              </div>
+              <h3 class="project-panel__title" data-split>Eternal Beauty Clinic</h3>
+              <p class="project-panel__description">Marketing website and booking flow for a premium beauty clinic. Focus on trust, conversion optimization, and seamless appointment scheduling.</p>
+              <div class="project-panel__highlight">
+                <strong>Highlight:</strong> 3x increase in online bookings within first month of launch.
+              </div>
+              <button class="project-panel__cta btn btn--outline" data-case-study="eternal">
+                <span>View Case Study</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+            <div class="project-panel__image">
+              <div class="project-panel__image-wrapper">
+                <div class="project-panel__placeholder" style="background: linear-gradient(135deg, #2e1a1f 0%, #5f2a3f 100%);">
+                  <svg viewBox="0 0 400 300" fill="none">
+                    <ellipse cx="200" cy="150" rx="120" ry="80" fill="var(--accent)" opacity="0.15"/>
+                    <ellipse cx="200" cy="150" rx="80" ry="50" fill="var(--accent)" opacity="0.25"/>
+                    <ellipse cx="200" cy="150" rx="40" ry="25" fill="var(--accent)" opacity="0.4"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-panel" data-project="4">
+            <div class="project-panel__content">
+              <div class="project-panel__meta">
+                <span class="project-panel__year">2023</span>
+                <div class="project-panel__tags">
+                  <span class="tag">UX Flows</span>
+                  <span class="tag">Service Design</span>
+                  <span class="tag">Self-Care Portal</span>
+                </div>
+              </div>
+              <h3 class="project-panel__title" data-split>iNJOY Self-Service</h3>
+              <p class="project-panel__description">Telecom self-care portal enabling customers to manage SIM/eSIM changes, file complaints, and handle service modifications independently.</p>
+              <div class="project-panel__highlight">
+                <strong>Highlight:</strong> Reduced support calls by 35% through intuitive self-service flows.
+              </div>
+              <button class="project-panel__cta btn btn--outline" data-case-study="injoy">
+                <span>View Case Study</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+            <div class="project-panel__image">
+              <div class="project-panel__image-wrapper">
+                <div class="project-panel__placeholder" style="background: linear-gradient(135deg, #1a2e1f 0%, #2a5f3f 100%);">
+                  <svg viewBox="0 0 400 300" fill="none">
+                    <rect x="150" y="50" width="100" height="200" rx="12" fill="var(--accent)" opacity="0.2"/>
+                    <rect x="165" y="70" width="70" height="120" rx="4" fill="var(--accent)" opacity="0.3"/>
+                    <circle cx="200" cy="220" r="15" fill="var(--accent)" opacity="0.4"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- Floating accent line -->
+      <div class="projects__accent-line" aria-hidden="true"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="services__background">
+        <div class="services__grid-pattern" aria-hidden="true"></div>
+      </div>
+      <div class="services__container">
+        <h2 class="services__title section-title" data-split>Services</h2>
+        <p class="services__intro" data-reveal>From concept to code, I help teams create digital products that resonate with users and drive results.</p>
+        <div class="services__grid">
+          <article class="service-card" data-reveal>
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="6" width="36" height="36" rx="4"/>
+                <circle cx="24" cy="24" r="8"/>
+                <path d="M24 12v4M24 32v4M12 24h4M32 24h4"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">UI/UX Design</h3>
+            <p class="service-card__description">User research, wireframes, prototypes, and high-fidelity interfaces that balance aesthetics with usability.</p>
+          </article>
+          
+          <article class="service-card" data-reveal>
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="8" width="40" height="28" rx="2"/>
+                <path d="M4 14h40"/>
+                <circle cx="10" cy="11" r="1.5" fill="currentColor"/>
+                <circle cx="16" cy="11" r="1.5" fill="currentColor"/>
+                <path d="M12 22h24M12 28h16"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Web Design</h3>
+            <p class="service-card__description">Marketing sites, product pages, and landing pages optimized for conversion and brand impact.</p>
+          </article>
+          
+          <article class="service-card" data-reveal>
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="14" height="14" rx="2"/>
+                <rect x="26" y="8" width="14" height="14" rx="2"/>
+                <rect x="8" y="26" width="14" height="14" rx="2"/>
+                <rect x="26" y="26" width="14" height="14" rx="2"/>
+                <path d="M15 4v4M33 4v4M15 40v4M33 40v4M4 15h4M4 33h4M40 15h4M40 33h4"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Design Systems</h3>
+            <p class="service-card__description">Scalable component libraries and documentation that ensure consistency across products and teams.</p>
+          </article>
+          
+          <article class="service-card" data-reveal>
+            <div class="service-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 24c0-10 8-18 18-18s18 8 18 18"/>
+                <path d="M12 24c0-7 5-12 12-12s12 5 12 12"/>
+                <circle cx="24" cy="24" r="4"/>
+                <path d="M24 28v12"/>
+                <path d="M18 40h12"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Motion Design</h3>
+            <p class="service-card__description">Micro-interactions, page transitions, and scroll-based animations that bring interfaces to life.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="contact__container">
+        <div class="contact__content">
+          <h2 class="contact__title" data-split>Let's build something people love using.</h2>
+          <p class="contact__intro" data-reveal>Have a project in mind? I'd love to hear about it. Drop me a message and let's create something great together.</p>
+          
+          <form class="contact__form" id="contact-form" novalidate>
+            <div class="form-group" data-reveal>
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-input" required autocomplete="name" aria-describedby="name-error">
+              <span class="form-error" id="name-error" role="alert"></span>
+            </div>
+            
+            <div class="form-group" data-reveal>
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" required autocomplete="email" aria-describedby="email-error">
+              <span class="form-error" id="email-error" role="alert"></span>
+            </div>
+            
+            <div class="form-group" data-reveal>
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-input form-textarea" rows="5" required aria-describedby="message-error"></textarea>
+              <span class="form-error" id="message-error" role="alert"></span>
+            </div>
+            
+            <button type="submit" class="btn btn--primary contact__submit" data-reveal>
+              <span class="btn__text">Send Message</span>
+              <span class="btn__loading" aria-hidden="true">
+                <span class="btn__dot"></span>
+                <span class="btn__dot"></span>
+                <span class="btn__dot"></span>
+              </span>
+            </button>
+          </form>
+        </div>
+        
+        <aside class="contact__sidebar">
+          <h3 class="contact__sidebar-title" data-reveal>Connect</h3>
+          <ul class="contact__socials">
+            <li data-reveal>
+              <a href="https://linkedin.com/in/ismailgaldi" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li data-reveal>
+              <a href="https://behance.net/ismailgaldi" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Behance Portfolio">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.61.41.28.733.65.96 1.12.225.47.34 1.05.34 1.73 0 .74-.17 1.36-.507 1.86-.338.5-.837.9-1.502 1.22.906.26 1.576.72 2.022 1.37.448.66.665 1.45.665 2.36 0 .75-.13 1.39-.41 1.93-.28.55-.67 1-1.16 1.35-.48.348-1.05.6-1.67.767-.61.165-1.252.254-1.91.254H0V4.51h6.938v-.007zM6.545 9.77c.583 0 1.06-.14 1.44-.422.378-.285.57-.75.57-1.404 0-.36-.066-.65-.2-.883-.13-.23-.32-.4-.554-.523-.23-.12-.5-.2-.81-.24-.305-.04-.63-.06-.97-.06H3.26v3.53h3.285zm.19 6.14c.38 0 .73-.04 1.06-.12.327-.08.61-.21.85-.39s.43-.42.57-.72c.14-.3.2-.67.2-1.1 0-.87-.23-1.49-.68-1.87-.46-.37-1.08-.56-1.87-.56H3.26v4.75h3.476zM17.105 4.142h6.24v1.77h-6.24V4.14zm3.12 2.91c.962 0 1.773.157 2.433.476.66.32 1.193.753 1.602 1.3.41.55.71 1.18.9 1.885.19.71.285 1.46.285 2.245 0 .29-.015.567-.037.83h-7.607c.04.88.31 1.56.81 2.04.5.48 1.14.72 1.92.72.6 0 1.12-.15 1.545-.45.43-.3.74-.63.93-.99h2.47c-.38 1.14-1.01 2.02-1.89 2.63-.88.61-1.94.92-3.18.92-.88 0-1.68-.14-2.4-.42-.73-.28-1.35-.68-1.87-1.2-.52-.52-.93-1.14-1.22-1.87-.29-.73-.43-1.53-.43-2.41 0-.85.14-1.64.43-2.37.3-.73.7-1.37 1.23-1.9.52-.54 1.15-.96 1.88-1.26.73-.31 1.53-.46 2.4-.46h.003zm2.416 4.15c-.07-.76-.34-1.35-.8-1.79-.46-.44-1.07-.66-1.83-.66-.48 0-.89.08-1.24.24-.34.16-.63.37-.87.62-.237.25-.42.54-.55.87-.12.33-.2.67-.22 1.02h5.51z"/>
+                </svg>
+                <span>Behance</span>
+              </a>
+            </li>
+            <li data-reveal>
+              <a href="https://dribbble.com/ismailgaldi" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Dribbble Portfolio">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.816zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.428 6.8.265 7.14.335-.02-2.42-.88-4.64-2.31-6.39z"/>
+                </svg>
+                <span>Dribbble</span>
+              </a>
+            </li>
+            <li data-reveal>
+              <a href="mailto:hello@ismailgaldi.com" class="social-link" aria-label="Send Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+                <span>Email</span>
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      
+      <!-- Success Toast -->
+      <div class="toast" id="success-toast" role="alert" aria-live="polite" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        <span>Message sent. I'll reply soon.</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__copyright">© 2026 Ismail Galdi — Crafted with motion.</p>
+      <button class="footer__scroll-top" aria-label="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Case Study Modal -->
+  <div class="modal" id="case-study-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal__backdrop"></div>
+    <div class="modal__container">
+      <div class="modal__content">
+        <button class="modal__close" aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 6 6 18M6 6l12 12"/>
+          </svg>
+        </button>
+        <h2 class="modal__title" id="modal-title"></h2>
+        <div class="modal__body">
+          <section class="modal__section">
+            <h3>The Challenge</h3>
+            <p class="modal__problem"></p>
+          </section>
+          <section class="modal__section">
+            <h3>The Solution</h3>
+            <p class="modal__solution"></p>
+          </section>
+          <section class="modal__section">
+            <h3>Key Outcomes</h3>
+            <ul class="modal__outcomes"></ul>
+          </section>
+          <section class="modal__section">
+            <h3>Gallery</h3>
+            <div class="modal__gallery"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
