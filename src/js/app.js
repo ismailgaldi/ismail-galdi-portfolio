@@ -47,8 +47,10 @@ export async function initApp() {
     initModal();
     initForm();
 
-    // Initialize Three.js scene
-    initHeroScene();
+    // Initialize Three.js scene (deferred for performance)
+    requestAnimationFrame(() => {
+        initHeroScene();
+    });
 
     // Initialize section animations
     initHero();
@@ -79,21 +81,20 @@ function setupLenis() {
     }
 
     lenis = new Lenis({
-        duration: 1.5,
+        duration: 1.0, // Reduced from 1.5 for snappier response
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         orientation: 'vertical',
         gestureOrientation: 'vertical',
         smoothWheel: true,
-        wheelMultiplier: 0.8,
-        touchMultiplier: 1.5,
+        wheelMultiplier: 1.2, // Increased for more direct control
+        touchMultiplier: 2,
         infinite: false,
-        lerp: 0.1
     });
 
     // Integrate Lenis with GSAP ticker for smooth ScrollTrigger updates
     lenis.on('scroll', ScrollTrigger.update);
 
-    // Use lag smoothing to prevent jumps
+    // Use lag smoothing to prevent jumps during heavy tasks
     gsap.ticker.lagSmoothing(100, 16);
 
     gsap.ticker.add((time) => {

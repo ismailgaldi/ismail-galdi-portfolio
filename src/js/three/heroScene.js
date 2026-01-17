@@ -31,24 +31,27 @@ export function initHeroScene() {
     scene = new THREE.Scene();
 
     // Camera
-    camera = new THREE.PerspectiveCamera(50, width / height, 0.1, 1000);
+    // Camera setup
+    camera = new THREE.PerspectiveCamera(50, width / height, 0.1, 100); // Reduced far plane
     camera.position.z = 5;
 
-    // Renderer
+    // Renderer setup
     renderer = new THREE.WebGLRenderer({
         canvas,
-        antialias: true,
+        antialias: window.devicePixelRatio < 2, // Disable antialias on high-DPI screens
         alpha: true,
-        powerPreference: 'high-performance'
+        powerPreference: 'high-performance',
+        stencil: false,
+        depth: true
     });
 
-    // Limit pixel ratio on mobile for performance
-    const pixelRatio = Math.min(window.devicePixelRatio, 2);
+    // Strict pixel ratio cap for performance
+    const pixelRatio = Math.min(window.devicePixelRatio, 1.5); // Cap at 1.5x
     renderer.setPixelRatio(pixelRatio);
     renderer.setSize(width, height);
     renderer.setClearColor(0x000000, 0);
 
-    // Create 3D object - Abstract geometric shape
+    // Create 3D object - Simplified geometry
     createAbstractShape();
 
     // Lighting
@@ -59,7 +62,7 @@ export function initHeroScene() {
         setupMouseInteraction(container);
     }
 
-    // Visibility observer for performance
+    // Visibility observer
     setupVisibilityObserver(canvas);
 
     // Scroll-linked effects
@@ -76,38 +79,38 @@ export function initHeroScene() {
  * Create abstract 3D shape (stylized "IG" or geometric)
  */
 function createAbstractShape() {
-    // Create a group for multiple geometries
     const group = new THREE.Group();
 
-    // Main torus knot (abstract, elegant)
-    const torusGeometry = new THREE.TorusKnotGeometry(1, 0.3, 128, 16, 2, 3);
+    // Optimized geometry: Reduced segments from 128/16 to 96/12
+    const torusGeometry = new THREE.TorusKnotGeometry(1, 0.3, 96, 12, 2, 3);
 
-    // Material with accent color influence
+    // Material - optimized roughness/metalness
     const material = new THREE.MeshStandardMaterial({
         color: 0x1a1f2a,
-        metalness: 0.9,
+        metalness: 0.8,
         roughness: 0.2,
-        envMapIntensity: 1
+        envMapIntensity: 0.8,
+        flatShading: false
     });
 
     mesh = new THREE.Mesh(torusGeometry, material);
     group.add(mesh);
 
-    // Add wireframe overlay for depth
+    // Wireframe - simplified
     const wireframeMaterial = new THREE.MeshBasicMaterial({
         color: 0xB6FF3B,
         wireframe: true,
         transparent: true,
-        opacity: 0.15
+        opacity: 0.1
     });
 
     const wireframeMesh = new THREE.Mesh(torusGeometry, wireframeMaterial);
     wireframeMesh.scale.set(1.02, 1.02, 1.02);
     group.add(wireframeMesh);
 
-    // Add floating particles around the shape
+    // Particles - reduced count
     const particlesGeometry = new THREE.BufferGeometry();
-    const particleCount = 100;
+    const particleCount = 60; // Reduced from 100
     const positions = new Float32Array(particleCount * 3);
 
     for (let i = 0; i < particleCount * 3; i += 3) {
